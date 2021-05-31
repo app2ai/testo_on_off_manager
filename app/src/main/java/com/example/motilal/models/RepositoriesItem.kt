@@ -1,9 +1,12 @@
 package com.example.motilal.models
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 @Entity(tableName = "repo_items")
 data class RepositoriesItem(
     @PrimaryKey(autoGenerate = true)
@@ -81,4 +84,4 @@ data class RepositoriesItem(
     val url: String,
     val watchers: Int,
     val watchers_count: Int
-)
+): Parcelable
